@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrygilbert/GitHub/phd_chatgpt/mlruns/1/d77546b074cf4c64967d1a050018afdb/artifacts
+end_time: 1677457145892
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: d77546b074cf4c64967d1a050018afdb
+run_uuid: d77546b074cf4c64967d1a050018afdb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1677457126393
+status: 3
+tags: []
+user_id: henrygilbert
