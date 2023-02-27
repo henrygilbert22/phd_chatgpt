@@ -1,6 +1,7 @@
 from __future__ import annotations
 import openai
 import os 
+from typing import List
 
 
 class ChatGPTUtil:
@@ -15,7 +16,12 @@ class ChatGPTUtil:
 
     @classmethod
     @set_api_key
-    def get_text_response(cls, prompt: str):
-        return openai.Completion.create(
+    def get_text_response(cls, prompt: str, max_tokens: int=1000, samples: int=1) -> List[str]:
+        response = openai.Completion.create(
             engine="ada",
-            prompt=prompt)
+            prompt=prompt,
+            max_tokens=max_tokens,
+            n=samples)
+        if 'choices' not in response:
+            raise ValueError('No choices in response')
+        return [choice['text'] for choice in response['choices']]
